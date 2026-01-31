@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Chat simples</title>
+<style>
+body { font-family: Arial; }
+#chat { border:1px solid #000; height:200px; overflow:auto; }
+</style>
+</head>
+<body>
+
+<div id="chat"></div>
+<input id="msg" placeholder="Digite..." />
+<button onclick="enviar()">Enviar</button>
+
+<script>
+function enviar() {
+  let msg = document.getElementById("msg").value;
+  let chat = document.getElementById("chat");
+  chat.innerHTML += "<p>" + msg + "</p>";
+  document.getElementById("msg").value = "";
+}
+</script>
+
+</body>
+</html>
